@@ -1,0 +1,32 @@
+# U3 확정 — StatsBomb 사용 대회 리스트 (CORE 2,404경기). 2026-06-04 잠금.
+# sb_ingest 가 이 파일을 읽어 events 를 적재한다. 경기수는 라이브 검증값(§5.1 목표 적중).
+# 변경 시 docs/decision_log.md U3 에 사유 기록.
+lock_date: "2026-06-04"
+target_matches: [1500, 2500]   # §5.1 목표 범위
+selected_matches: 2404
+
+tiers:
+  A_men_full_league:           # 볼륨 백본 (2015/16 풀시즌; 단일 시즌 → 리그 간 이질성으로 강건성)
+    - {competition: "La Liga",        season: "2015/2016", competition_id: 11, season_id: 27, matches: 380}
+    - {competition: "Premier League", season: "2015/2016", competition_id: 2,  season_id: 27, matches: 380}
+    - {competition: "Serie A",        season: "2015/2016", competition_id: 12, season_id: 27, matches: 380}
+    - {competition: "Ligue 1",        season: "2015/2016", competition_id: 7,  season_id: 27, matches: 377}
+  B_major_tournament:          # 고강도·스코어 상태 다양성
+    - {competition: "FIFA World Cup", season: "2018", competition_id: 43,   season_id: 3,   matches: 64}
+    - {competition: "FIFA World Cup", season: "2022", competition_id: 43,   season_id: 106, matches: 64}
+    - {competition: "UEFA Euro",      season: "2020", competition_id: 55,   season_id: 43,  matches: 51}
+    - {competition: "UEFA Euro",      season: "2024", competition_id: 55,   season_id: 282, matches: 51}
+    - {competition: "Copa America",   season: "2024", competition_id: 223,  season_id: 282, matches: 32}
+    - {competition: "African Cup of Nations", season: "2023", competition_id: 1267, season_id: 107, matches: 52}
+  C_women:                     # 성별 일반화·leave-one-out (FA WSL 4시즌 → 시즌 FE 가능)
+    - {competition: "FA Women's Super League", season: "2018/2019", competition_id: 37, season_id: 4,   matches: 107}
+    - {competition: "FA Women's Super League", season: "2019/2020", competition_id: 37, season_id: 42,  matches: 87}
+    - {competition: "FA Women's Super League", season: "2020/2021", competition_id: 37, season_id: 90,  matches: 131}
+    - {competition: "FA Women's Super League", season: "2023/2024", competition_id: 37, season_id: 281, matches: 132}
+    - {competition: "Women's World Cup", season: "2019", competition_id: 72, season_id: 30,  matches: 52}
+    - {competition: "Women's World Cup", season: "2023", competition_id: 72, season_id: 107, matches: 64}
+
+# 탐색/사례 전용 (주 분석 제외)
+exploratory_only:
+  - {competition: "Bundesliga 2023/24 (레버쿠젠 단일팀, 34경기)", note: "무패 사례 강건성"}
+  - {competition: "La Liga 희소 Messi 서브셋 2004-2020 (7-38경기)", note: "표본 편향 — 탐색만"}

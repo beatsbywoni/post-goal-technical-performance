@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+docs/
+data/features/
+data/interim/
+data/raw/
+figures/output/

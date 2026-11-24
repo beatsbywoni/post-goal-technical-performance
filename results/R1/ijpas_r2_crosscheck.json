@@ -1,0 +1,125 @@
+{
+ "score": {
+  "state|post5": {
+   "d": -0.1188,
+   "n_event": 2393,
+   "n_control": 28223,
+   "ref_d": -0.1188,
+   "ref_n_event": 2393,
+   "ref_n_control": 28223,
+   "agree": true
+  },
+  "state|post10": {
+   "d": -0.0942,
+   "n_event": 2139,
+   "n_control": 24833,
+   "ref_d": -0.0942,
+   "ref_n_event": 2139,
+   "ref_n_control": 24833,
+   "agree": true
+  },
+  "state|post15": {
+   "d": -0.1247,
+   "n_event": 1926,
+   "n_control": 21859,
+   "ref_d": -0.1247,
+   "ref_n_event": 1926,
+   "ref_n_control": 21859,
+   "agree": true
+  },
+  "pre|post5": {
+   "d": -0.3711,
+   "n_event": 2911,
+   "n_control": 39121,
+   "ref_d": -0.3711,
+   "ref_n_event": 2911,
+   "ref_n_control": 39121,
+   "agree": true
+  },
+  "pre|post10": {
+   "d": -0.3801,
+   "n_event": 2236,
+   "n_control": 29441,
+   "ref_d": -0.3801,
+   "ref_n_event": 2236,
+   "ref_n_control": 29441,
+   "agree": true
+  },
+  "pre|post15": {
+   "d": -0.5387,
+   "n_event": 1708,
+   "n_control": 21993,
+   "ref_d": -0.5387,
+   "ref_n_event": 1708,
+   "ref_n_control": 21993,
+   "agree": true
+  },
+  "flow_other_goal_before_end": {
+   "recomputed": 1319,
+   "ref": 1336,
+   "note": "reference counts goals before the dismissal step; this recount removes dismissal windows first, so it is a lower bound and equals the reference when no multi-goal window also contains a dismissal"
+  }
+ },
+ "concede": {
+  "state|post5": {
+   "d": -0.0196,
+   "n_event": 2373,
+   "n_control": 27980,
+   "ref_d": -0.0196,
+   "ref_n_event": 2373,
+   "ref_n_control": 27980,
+   "agree": true
+  },
+  "state|post10": {
+   "d": -0.1623,
+   "n_event": 2143,
+   "n_control": 24889,
+   "ref_d": -0.1623,
+   "ref_n_event": 2143,
+   "ref_n_control": 24889,
+   "agree": true
+  },
+  "state|post15": {
+   "d": -0.2175,
+   "n_event": 1925,
+   "n_control": 21851,
+   "ref_d": -0.2175,
+   "ref_n_event": 1925,
+   "ref_n_control": 21851,
+   "agree": true
+  },
+  "pre|post5": {
+   "d": 0.0038,
+   "n_event": 2890,
+   "n_control": 38870,
+   "ref_d": 0.0038,
+   "ref_n_event": 2890,
+   "ref_n_control": 38870,
+   "agree": true
+  },
+  "pre|post10": {
+   "d": -0.302,
+   "n_event": 2239,
+   "n_control": 29484,
+   "ref_d": -0.302,
+   "ref_n_event": 2239,
+   "ref_n_control": 29484,
+   "agree": true
+  },
+  "pre|post15": {
+   "d": -0.2677,
+   "n_event": 1704,
+   "n_control": 21912,
+   "ref_d": -0.2677,
+   "ref_n_event": 1704,
+   "ref_n_control": 21912,
+   "agree": true
+  },
+  "flow_other_goal_before_end": {
+   "recomputed": 1320,
+   "ref": 1337,
+   "note": "reference counts goals before the dismissal step; this recount removes dismissal windows first, so it is a lower bound and equals the reference when no multi-goal window also contains a dismissal"
+  }
+ },
+ "all_agree": true
+}

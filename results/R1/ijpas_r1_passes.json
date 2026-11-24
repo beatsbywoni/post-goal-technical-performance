@@ -1,0 +1,356 @@
+{
+ "score": {
+  "xpass_model": {
+   "n_passes_fit": 1583956,
+   "auc": 0.794,
+   "params": {
+    "const": 0.625,
+    "len": 0.6522,
+    "len2": -0.024,
+    "x": 2.7216,
+    "x2": -5.1114,
+    "y": -5.7486,
+    "y2": 5.688,
+    "yc": -1.5024,
+    "cos": -1.9293,
+    "sin": 0.0088,
+    "fwd": 0.1318,
+    "set_piece": -0.3163,
+    "xcos": 0.7559
+   }
+  },
+  "post5": {
+   "n_events": 2258,
+   "observed_minus_control_pp": [
+    0.2557,
+    -0.6411,
+    1.0826
+   ],
+   "expected_minus_control_pp": [
+    0.8276,
+    0.5148,
+    1.1495
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    -0.572,
+    -1.3018,
+    0.1671
+   ],
+   "passes_per_window_diff": [
+    -1.8543,
+    -2.131,
+    -1.524
+   ],
+   "passes_per_window_control": 11.96,
+   "start_x_diff_yards": [
+    -2.8445,
+    -3.6034,
+    -2.0854
+   ],
+   "start_x_control": 60.38,
+   "defensive_third_share_diff_pp": [
+    2.7587,
+    1.5862,
+    3.891
+   ],
+   "defensive_third_share_control_pct": 25.2,
+   "attacking_third_share_diff_pp": [
+    -4.1348,
+    -5.0534,
+    -3.0078
+   ],
+   "attacking_third_share_control_pct": 25.58,
+   "forward_share_diff_pp": [
+    -0.3503,
+    -1.2848,
+    0.5966
+   ],
+   "length_diff_yards": [
+    -0.0169,
+    -0.1113,
+    0.0733
+   ]
+  },
+  "post10": {
+   "n_events": 2270,
+   "observed_minus_control_pp": [
+    1.1977,
+    0.4024,
+    1.9752
+   ],
+   "expected_minus_control_pp": [
+    0.8789,
+    0.5511,
+    1.1644
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    0.3188,
+    -0.3174,
+    1.0356
+   ],
+   "passes_per_window_diff": [
+    0.4766,
+    0.1414,
+    0.806
+   ],
+   "passes_per_window_control": 11.93,
+   "start_x_diff_yards": [
+    -0.9577,
+    -1.6755,
+    -0.2564
+   ],
+   "start_x_control": 60.41,
+   "defensive_third_share_diff_pp": [
+    0.0293,
+    -1.0807,
+    1.0872
+   ],
+   "defensive_third_share_control_pct": 25.3,
+   "attacking_third_share_diff_pp": [
+    -1.9368,
+    -2.8761,
+    -0.9485
+   ],
+   "attacking_third_share_control_pct": 25.66,
+   "forward_share_diff_pp": [
+    -0.5442,
+    -1.3579,
+    0.2546
+   ],
+   "length_diff_yards": [
+    0.1527,
+    0.0672,
+    0.2403
+   ]
+  },
+  "post15": {
+   "n_events": 2295,
+   "observed_minus_control_pp": [
+    1.1568,
+    0.3228,
+    1.9076
+   ],
+   "expected_minus_control_pp": [
+    0.4916,
+    0.1237,
+    0.817
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    0.6651,
+    -0.0527,
+    1.3364
+   ],
+   "passes_per_window_diff": [
+    0.4209,
+    0.11,
+    0.7286
+   ],
+   "passes_per_window_control": 12.03,
+   "start_x_diff_yards": [
+    -1.1551,
+    -1.847,
+    -0.4224
+   ],
+   "start_x_control": 60.42,
+   "defensive_third_share_diff_pp": [
+    0.606,
+    -0.4621,
+    1.6948
+   ],
+   "defensive_third_share_control_pct": 25.19,
+   "attacking_third_share_diff_pp": [
+    -1.6499,
+    -2.7138,
+    -0.5964
+   ],
+   "attacking_third_share_control_pct": 25.59,
+   "forward_share_diff_pp": [
+    -0.1111,
+    -0.9009,
+    0.7929
+   ],
+   "length_diff_yards": [
+    0.1258,
+    0.0308,
+    0.215
+   ]
+  }
+ },
+ "concede": {
+  "xpass_model": {
+   "n_passes_fit": 1583956,
+   "auc": 0.794,
+   "params": {
+    "const": 0.625,
+    "len": 0.6522,
+    "len2": -0.024,
+    "x": 2.7216,
+    "x2": -5.1114,
+    "y": -5.7486,
+    "y2": 5.688,
+    "yc": -1.5024,
+    "cos": -1.9293,
+    "sin": 0.0088,
+    "fwd": 0.1318,
+    "set_piece": -0.3163,
+    "xcos": 0.7559
+   }
+  },
+  "post5": {
+   "n_events": 2351,
+   "observed_minus_control_pp": [
+    1.9191,
+    1.2124,
+    2.5322
+   ],
+   "expected_minus_control_pp": [
+    1.1539,
+    0.8316,
+    1.4387
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    0.7652,
+    0.132,
+    1.3744
+   ],
+   "passes_per_window_diff": [
+    -1.167,
+    -1.4183,
+    -0.8946
+   ],
+   "passes_per_window_control": 11.93,
+   "start_x_diff_yards": [
+    -1.2709,
+    -1.8601,
+    -0.6422
+   ],
+   "start_x_control": 60.27,
+   "defensive_third_share_diff_pp": [
+    -4.2423,
+    -5.1506,
+    -3.3042
+   ],
+   "defensive_third_share_control_pct": 25.02,
+   "attacking_third_share_diff_pp": [
+    -6.459,
+    -7.3154,
+    -5.5657
+   ],
+   "attacking_third_share_control_pct": 25.53,
+   "forward_share_diff_pp": [
+    -7.6161,
+    -8.4788,
+    -6.8077
+   ],
+   "length_diff_yards": [
+    -0.1505,
+    -0.2375,
+    -0.0641
+   ]
+  },
+  "post10": {
+   "n_events": 2263,
+   "observed_minus_control_pp": [
+    -0.1553,
+    -0.9521,
+    0.6654
+   ],
+   "expected_minus_control_pp": [
+    0.6171,
+    0.2875,
+    0.9513
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    -0.7725,
+    -1.4745,
+    -0.0589
+   ],
+   "passes_per_window_diff": [
+    -0.238,
+    -0.4908,
+    0.0456
+   ],
+   "passes_per_window_control": 11.82,
+   "start_x_diff_yards": [
+    -1.8109,
+    -2.4799,
+    -1.0785
+   ],
+   "start_x_control": 60.31,
+   "defensive_third_share_diff_pp": [
+    1.3899,
+    0.3641,
+    2.4407
+   ],
+   "defensive_third_share_control_pct": 25.1,
+   "attacking_third_share_diff_pp": [
+    -2.8133,
+    -3.7274,
+    -1.793
+   ],
+   "attacking_third_share_control_pct": 25.55,
+   "forward_share_diff_pp": [
+    -0.6093,
+    -1.4022,
+    0.2358
+   ],
+   "length_diff_yards": [
+    0.0497,
+    -0.0357,
+    0.1354
+   ]
+  },
+  "post15": {
+   "n_events": 2307,
+   "observed_minus_control_pp": [
+    0.4681,
+    -0.2378,
+    1.1987
+   ],
+   "expected_minus_control_pp": [
+    0.7996,
+    0.4654,
+    1.104
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    -0.3314,
+    -1.0526,
+    0.3296
+   ],
+   "passes_per_window_diff": [
+    -0.0526,
+    -0.3316,
+    0.2188
+   ],
+   "passes_per_window_control": 11.84,
+   "start_x_diff_yards": [
+    -1.7648,
+    -2.4632,
+    -1.0943
+   ],
+   "start_x_control": 60.3,
+   "defensive_third_share_diff_pp": [
+    1.3072,
+    0.2785,
+    2.3454
+   ],
+   "defensive_third_share_control_pct": 25.08,
+   "attacking_third_share_diff_pp": [
+    -2.5465,
+    -3.485,
+    -1.5666
+   ],
+   "attacking_third_share_control_pct": 25.54,
+   "forward_share_diff_pp": [
+    -0.392,
+    -1.2504,
+    0.4623
+   ],
+   "length_diff_yards": [
+    0.0598,
+    -0.0266,
+    0.1463
+   ]
+  }
+ }
+}

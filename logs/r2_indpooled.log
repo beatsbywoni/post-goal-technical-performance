@@ -1,0 +1,8 @@
+[    17s] ▶ indpooled
+[    55s] score indpooled post5 {'short_pass_acc': (-0.1499, 0.022), 'miscontrol_rate': (-0.0678, 0.1339), 'foul_per_def_action': (0.0136, 0.0987)}
+[    86s] score indpooled post10 {'short_pass_acc': (-0.0706, 0.0974), 'miscontrol_rate': (-0.1059, 0.1273), 'foul_per_def_action': (0.021, 0.1175)}
+[   118s] score indpooled post15 {'short_pass_acc': (-0.0337, 0.0833), 'miscontrol_rate': (-0.0822, 0.1175), 'foul_per_def_action': (-0.0391, 0.0836)}
+[   153s] concede indpooled post5 {'short_pass_acc': (0.0291, 0.1495), 'miscontrol_rate': (-0.0893, 0.0675), 'foul_per_def_action': (0.0324, 0.1145)}
+[   187s] concede indpooled post10 {'short_pass_acc': (-0.155, -0.0295), 'miscontrol_rate': (-0.1189, 0.0104), 'foul_per_def_action': (0.0327, 0.1226)}
+[   217s] concede indpooled post15 {'short_pass_acc': (-0.1163, 0.0289), 'miscontrol_rate': (-0.2073, -0.0255), 'foul_per_def_action': (-0.0163, 0.0868)}
+[   217s] ✓ docs/ijpas_r2_indpooled.json

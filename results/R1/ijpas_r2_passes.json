@@ -1,0 +1,474 @@
+{
+ "score": {
+  "xpass_model": {
+   "n_unique_control_passes": 731993,
+   "n_control_pass_window_rows": 1583956,
+   "n_unique_passes_all": 877340,
+   "auc_crossfit_oos": 0.793,
+   "brier_oos": 0.1015,
+   "calibration_slope_deciles": 0.991,
+   "calibration_deciles": [
+    [
+     0.493,
+     0.5,
+     73200
+    ],
+    [
+     0.739,
+     0.743,
+     73199
+    ],
+    [
+     0.809,
+     0.797,
+     73199
+    ],
+    [
+     0.849,
+     0.837,
+     73199
+    ],
+    [
+     0.88,
+     0.88,
+     73200
+    ],
+    [
+     0.909,
+     0.917,
+     73199
+    ],
+    [
+     0.937,
+     0.948,
+     73199
+    ],
+    [
+     0.959,
+     0.961,
+     73199
+    ],
+    [
+     0.976,
+     0.973,
+     73199
+    ],
+    [
+     0.989,
+     0.983,
+     73200
+    ]
+   ],
+   "folds": 5,
+   "fold_unit": "match",
+   "params_full_fit": {
+    "const": 1.0001,
+    "len": 0.6335,
+    "len2": -0.0233,
+    "x": 2.7302,
+    "x2": -5.1169,
+    "y": -6.539,
+    "y2": 6.4802,
+    "yc": -1.7679,
+    "cos": -1.9572,
+    "sin": 0.0132,
+    "fwd": 0.1288,
+    "non_regular_play": -0.3113,
+    "xcos": 0.7884
+   },
+   "note": "fitted to unique unpressured short passes in control windows; each pass's expected completion comes from the fold model that excludes its match"
+  },
+  "post5": {
+   "n_events": 2258,
+   "observed_minus_control_pp": [
+    0.2557,
+    -0.6411,
+    1.0826
+   ],
+   "expected_minus_control_pp": [
+    0.8193,
+    0.5106,
+    1.138
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    -0.5636,
+    -1.2941,
+    0.1804
+   ],
+   "passes_per_window_diff": [
+    -1.8543,
+    -2.131,
+    -1.524
+   ],
+   "passes_per_window_control": 11.96,
+   "start_x_diff_yards": [
+    -2.8445,
+    -3.6034,
+    -2.0854
+   ],
+   "start_x_control": 60.38,
+   "defensive_third_share_diff_pp": [
+    2.7587,
+    1.5862,
+    3.891
+   ],
+   "defensive_third_share_control_pct": 25.2,
+   "attacking_third_share_diff_pp": [
+    -4.1348,
+    -5.0534,
+    -3.0078
+   ],
+   "attacking_third_share_control_pct": 25.58,
+   "forward_share_diff_pp": [
+    -0.3503,
+    -1.2848,
+    0.5966
+   ],
+   "length_diff_yards": [
+    -0.0169,
+    -0.1113,
+    0.0733
+   ]
+  },
+  "post10": {
+   "n_events": 2082,
+   "observed_minus_control_pp": [
+    1.347,
+    0.5519,
+    2.1226
+   ],
+   "expected_minus_control_pp": [
+    0.859,
+    0.5613,
+    1.1492
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    0.4881,
+    -0.295,
+    1.1991
+   ],
+   "passes_per_window_diff": [
+    0.491,
+    0.1734,
+    0.8201
+   ],
+   "passes_per_window_control": 11.81,
+   "start_x_diff_yards": [
+    -0.8886,
+    -1.6511,
+    -0.1923
+   ],
+   "start_x_control": 60.38,
+   "defensive_third_share_diff_pp": [
+    0.0396,
+    -1.0756,
+    1.0683
+   ],
+   "defensive_third_share_control_pct": 25.29,
+   "attacking_third_share_diff_pp": [
+    -1.7119,
+    -2.7094,
+    -0.7093
+   ],
+   "attacking_third_share_control_pct": 25.59,
+   "forward_share_diff_pp": [
+    -0.6001,
+    -1.3632,
+    0.2592
+   ],
+   "length_diff_yards": [
+    0.1603,
+    0.0685,
+    0.2467
+   ]
+  },
+  "post15": {
+   "n_events": 1880,
+   "observed_minus_control_pp": [
+    1.1734,
+    0.3666,
+    2.0623
+   ],
+   "expected_minus_control_pp": [
+    0.3313,
+    -0.0729,
+    0.7124
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    0.8422,
+    0.021,
+    1.5608
+   ],
+   "passes_per_window_diff": [
+    0.5013,
+    0.1859,
+    0.8541
+   ],
+   "passes_per_window_control": 11.71,
+   "start_x_diff_yards": [
+    -0.8755,
+    -1.6251,
+    -0.115
+   ],
+   "start_x_control": 60.3,
+   "defensive_third_share_diff_pp": [
+    0.5483,
+    -0.6568,
+    1.739
+   ],
+   "defensive_third_share_control_pct": 25.31,
+   "attacking_third_share_diff_pp": [
+    -1.347,
+    -2.4863,
+    -0.2423
+   ],
+   "attacking_third_share_control_pct": 25.44,
+   "forward_share_diff_pp": [
+    -0.1721,
+    -1.0502,
+    0.7771
+   ],
+   "length_diff_yards": [
+    0.1097,
+    0.0131,
+    0.2004
+   ]
+  }
+ },
+ "concede": {
+  "xpass_model": {
+   "n_unique_control_passes": 731993,
+   "n_control_pass_window_rows": 1583956,
+   "n_unique_passes_all": 875281,
+   "auc_crossfit_oos": 0.793,
+   "brier_oos": 0.1015,
+   "calibration_slope_deciles": 0.991,
+   "calibration_deciles": [
+    [
+     0.493,
+     0.5,
+     73200
+    ],
+    [
+     0.739,
+     0.743,
+     73199
+    ],
+    [
+     0.809,
+     0.797,
+     73199
+    ],
+    [
+     0.849,
+     0.837,
+     73199
+    ],
+    [
+     0.88,
+     0.88,
+     73200
+    ],
+    [
+     0.909,
+     0.917,
+     73199
+    ],
+    [
+     0.937,
+     0.948,
+     73199
+    ],
+    [
+     0.959,
+     0.961,
+     73199
+    ],
+    [
+     0.976,
+     0.973,
+     73199
+    ],
+    [
+     0.989,
+     0.983,
+     73200
+    ]
+   ],
+   "folds": 5,
+   "fold_unit": "match",
+   "params_full_fit": {
+    "const": 1.0001,
+    "len": 0.6335,
+    "len2": -0.0233,
+    "x": 2.7302,
+    "x2": -5.1169,
+    "y": -6.539,
+    "y2": 6.4802,
+    "yc": -1.7679,
+    "cos": -1.9572,
+    "sin": 0.0132,
+    "fwd": 0.1288,
+    "non_regular_play": -0.3113,
+    "xcos": 0.7884
+   },
+   "note": "fitted to unique unpressured short passes in control windows; each pass's expected completion comes from the fold model that excludes its match"
+  },
+  "post5": {
+   "n_events": 2351,
+   "observed_minus_control_pp": [
+    1.9191,
+    1.2124,
+    2.5322
+   ],
+   "expected_minus_control_pp": [
+    1.2564,
+    0.9411,
+    1.5386
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    0.6627,
+    0.0265,
+    1.2698
+   ],
+   "passes_per_window_diff": [
+    -1.167,
+    -1.4183,
+    -0.8946
+   ],
+   "passes_per_window_control": 11.93,
+   "start_x_diff_yards": [
+    -1.2709,
+    -1.8601,
+    -0.6422
+   ],
+   "start_x_control": 60.27,
+   "defensive_third_share_diff_pp": [
+    -4.2423,
+    -5.1506,
+    -3.3042
+   ],
+   "defensive_third_share_control_pct": 25.02,
+   "attacking_third_share_diff_pp": [
+    -6.459,
+    -7.3154,
+    -5.5657
+   ],
+   "attacking_third_share_control_pct": 25.53,
+   "forward_share_diff_pp": [
+    -7.6161,
+    -8.4788,
+    -6.8077
+   ],
+   "length_diff_yards": [
+    -0.1505,
+    -0.2375,
+    -0.0641
+   ]
+  },
+  "post10": {
+   "n_events": 2079,
+   "observed_minus_control_pp": [
+    -0.2986,
+    -1.1283,
+    0.5208
+   ],
+   "expected_minus_control_pp": [
+    0.5851,
+    0.2744,
+    0.904
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    -0.8837,
+    -1.6452,
+    -0.1208
+   ],
+   "passes_per_window_diff": [
+    -0.2443,
+    -0.5397,
+    0.0371
+   ],
+   "passes_per_window_control": 11.86,
+   "start_x_diff_yards": [
+    -1.7702,
+    -2.4443,
+    -1.0817
+   ],
+   "start_x_control": 60.31,
+   "defensive_third_share_diff_pp": [
+    1.547,
+    0.5616,
+    2.7635
+   ],
+   "defensive_third_share_control_pct": 25.07,
+   "attacking_third_share_diff_pp": [
+    -2.6928,
+    -3.6946,
+    -1.7258
+   ],
+   "attacking_third_share_control_pct": 25.6,
+   "forward_share_diff_pp": [
+    -0.5158,
+    -1.3334,
+    0.3662
+   ],
+   "length_diff_yards": [
+    0.0453,
+    -0.0466,
+    0.1335
+   ]
+  },
+  "post15": {
+   "n_events": 1888,
+   "observed_minus_control_pp": [
+    0.4707,
+    -0.3975,
+    1.3103
+   ],
+   "expected_minus_control_pp": [
+    0.8019,
+    0.4478,
+    1.1493
+   ],
+   "obs_minus_exp_vs_control_pp": [
+    -0.3312,
+    -1.0711,
+    0.4059
+   ],
+   "passes_per_window_diff": [
+    -0.1162,
+    -0.4328,
+    0.1768
+   ],
+   "passes_per_window_control": 11.88,
+   "start_x_diff_yards": [
+    -1.9634,
+    -2.7291,
+    -1.2729
+   ],
+   "start_x_control": 60.39,
+   "defensive_third_share_diff_pp": [
+    1.8241,
+    0.8087,
+    2.9615
+   ],
+   "defensive_third_share_control_pct": 24.91,
+   "attacking_third_share_diff_pp": [
+    -2.7099,
+    -3.8282,
+    -1.6341
+   ],
+   "attacking_third_share_control_pct": 25.69,
+   "forward_share_diff_pp": [
+    -0.0356,
+    -0.9043,
+    0.8066
+   ],
+   "length_diff_yards": [
+    0.0762,
+    -0.011,
+    0.166
+   ]
+  }
+ }
+}

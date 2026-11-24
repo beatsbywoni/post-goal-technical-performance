@@ -1,0 +1,28 @@
+[    23s] kickoff_possession score …400/2404
+[    48s] kickoff_possession score …800/2404
+[    74s] kickoff_possession score …1200/2404
+[   100s] kickoff_possession score …1600/2404
+[   126s] kickoff_possession score …2000/2404
+[   152s] kickoff_possession score …2400/2404
+[   161s] ✓ /home/claude/ijpas_r2/data/features/kickoff_excl/football_momentum_long.parquet 2544969 rows
+[   186s] kickoff_possession concede …400/2404
+[   210s] kickoff_possession concede …800/2404
+[   237s] kickoff_possession concede …1200/2404
+[   262s] kickoff_possession concede …1600/2404
+[   288s] kickoff_possession concede …2000/2404
+[   316s] kickoff_possession concede …2400/2404
+[   324s] ✓ /home/claude/ijpas_r2/data/features/kickoff_excl/football_long.parquet 2534879 rows
+[   350s] first60s score …400/2404
+[   375s] first60s score …800/2404
+[   401s] first60s score …1200/2404
+[   425s] first60s score …1600/2404
+[   450s] first60s score …2000/2404
+[   476s] first60s score …2400/2404
+[   485s] ✓ /home/claude/ijpas_r2/data/features/kickoff_60s/football_momentum_long.parquet 2533984 rows
+[   510s] first60s concede …400/2404
+[   535s] first60s concede …800/2404
+[   563s] first60s concede …1200/2404
+[   590s] first60s concede …1600/2404
+[   616s] first60s concede …2000/2404
+[   641s] first60s concede …2400/2404
+[   651s] ✓ /home/claude/ijpas_r2/data/features/kickoff_60s/football_long.parquet 2533982 rows

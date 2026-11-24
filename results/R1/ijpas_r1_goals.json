@@ -1,0 +1,57 @@
+{
+ "totals": {
+  "goals": 6528,
+  "own_goals": 239,
+  "pen_goals": 496,
+  "goals_p1_stoppage": 134,
+  "goals_ET": 21,
+  "dismissals": 495,
+  "matches_with_dismissal": 428,
+  "matches_ET": 41,
+  "shootout_matches": 29,
+  "shootout_kicks": 291,
+  "shootout_converted": 198
+ },
+ "per_comp": {
+  "La Liga": {
+   "goals": 1043,
+   "matches": 380
+  },
+  "Premier League": {
+   "goals": 1026,
+   "matches": 380
+  },
+  "Serie A": {
+   "goals": 979,
+   "matches": 380
+  },
+  "Ligue 1": {
+   "goals": 949,
+   "matches": 377
+  },
+  "FIFA World Cup": {
+   "goals": 341,
+   "matches": 128
+  },
+  "UEFA Euro": {
+   "goals": 259,
+   "matches": 102
+  },
+  "Copa America": {
+   "goals": 70,
+   "matches": 32
+  },
+  "African Cup of Nations": {
+   "goals": 119,
+   "matches": 52
+  },
+  "FA Women's Super League": {
+   "goals": 1432,
+   "matches": 457
+  },
+  "Women's World Cup": {
+   "goals": 310,
+   "matches": 116
+  }
+ }
+}

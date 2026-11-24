@@ -1,0 +1,175 @@
+{
+ "score|pre|post5": {
+  "r1": -0.3723,
+  "n_r1": 3228,
+  "pathA": -0.3723,
+  "nA": 3228,
+  "pathB": -0.3723,
+  "nB": 3228,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "score|state|post5": {
+  "r1": -0.1354,
+  "n_r1": 2393,
+  "pathA": -0.1354,
+  "nA": 2393,
+  "pathB": -0.1354,
+  "nB": 2393,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "score|pre|post10": {
+  "r1": -0.4198,
+  "n_r1": 2580,
+  "pathA": -0.4198,
+  "nA": 2580,
+  "pathB": -0.4198,
+  "nB": 2580,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "score|state|post10": {
+  "r1": -0.1167,
+  "n_r1": 2329,
+  "pathA": -0.1167,
+  "nA": 2329,
+  "pathB": -0.1167,
+  "nB": 2329,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "score|pre|post15": {
+  "r1": -0.5486,
+  "n_r1": 1961,
+  "pathA": -0.5486,
+  "nA": 1961,
+  "pathB": -0.5486,
+  "nB": 1961,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "score|state|post15": {
+  "r1": -0.121,
+  "n_r1": 2352,
+  "pathA": -0.121,
+  "nA": 2352,
+  "pathB": -0.121,
+  "nB": 2352,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "concede|pre|post5": {
+  "r1": 0.0202,
+  "n_r1": 3207,
+  "pathA": 0.0202,
+  "nA": 3207,
+  "pathB": 0.0202,
+  "nB": 3207,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "concede|state|post5": {
+  "r1": -0.0218,
+  "n_r1": 2373,
+  "pathA": -0.0218,
+  "nA": 2373,
+  "pathB": -0.0218,
+  "nB": 2373,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "concede|pre|post10": {
+  "r1": -0.2799,
+  "n_r1": 2583,
+  "pathA": -0.2799,
+  "nA": 2583,
+  "pathB": -0.2799,
+  "nB": 2583,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "concede|state|post10": {
+  "r1": -0.1504,
+  "n_r1": 2332,
+  "pathA": -0.1504,
+  "nA": 2332,
+  "pathB": -0.1504,
+  "nB": 2332,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "concede|pre|post15": {
+  "r1": -0.2706,
+  "n_r1": 1956,
+  "pathA": -0.2706,
+  "nA": 1956,
+  "pathB": -0.2706,
+  "nB": 1956,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "concede|state|post15": {
+  "r1": -0.2219,
+  "n_r1": 2352,
+  "pathA": -0.2219,
+  "nA": 2352,
+  "pathB": -0.2219,
+  "nB": 2352,
+  "n_control": [
+   130234,
+   130234,
+   130234
+  ],
+  "agree": true
+ },
+ "_summary": {
+  "cells": 12,
+  "disagreements": 0,
+  "tolerance_d": 0.0015
+ }
+}

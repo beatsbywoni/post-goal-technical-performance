@@ -1,0 +1,16 @@
+Plans, results, documentation and derived data
+Copyright (c) 2026 Hongwon Jeong
+
+The contents of plans/, results/, logs/, data/derived/ and the documentation
+(README.md) are licensed under the Creative Commons Attribution 4.0
+International licence (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+The files in data/derived/ are derived from StatsBomb open data
+(https://github.com/statsbomb/open-data). They are licensed under CC BY 4.0
+only to the extent of the author's own rights and remain subject to the terms
+of the StatsBomb open data repository, including stating StatsBomb as the
+data source. The raw StatsBomb event data are not redistributed here.
+
+The code (src/, analysis/, figures/, tests/, configs/) is licensed under the
+MIT licence (see LICENSE).

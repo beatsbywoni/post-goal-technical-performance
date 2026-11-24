@@ -1,0 +1,14 @@
+# 롱포맷 데이터 계약 버전 (§12.2). core가 아는 유일한 형식.
+# 변경은 schema_ver 증가 + data/contracts/long_format_v*.md 갱신으로만.
+schema_ver: v1
+
+columns:
+  unit_id:      {type: str,   desc: "플레이어 puuid 해시 / 팀-경기 id"}
+  domain:       {type: str,   enum: [lol, football], desc: "도메인"}
+  event_id:     {type: str,   desc: "사건 인스턴스 id"}
+  window:       {type: str,   desc: "pre5 | post5 | post10 | post15 ..."}
+  metric:       {type: str,   desc: "configs/<domain>.yaml의 지표 키"}
+  value:        {type: float, desc: "지표 값"}
+  metric_class: {type: str,   enum: [execution, choice, descriptor], desc: "실행 vs 선택 vs 기술(descriptor; 합성 미포함, 2026-10 추가)"}
+  context:      {type: json,  desc: "{tier|competition, patch|season, minute_band, score_state ...}"}
+  schema_ver:   {type: str,   const: v1}

@@ -1,0 +1,157 @@
+# Version-control history of the Study B analysis plan and confirmatory scripts
+# Exported 2026-09-03T06:45Z from the project git repository (author field removed for anonymous review).
+# Format: commit hash | author date (KST) | files touched | subject
+
+## docs/momentum_prereg.md
+4e7c72a | 2026-06-11 07:48:56 (KST) | momentum->negativity: net-z confirmatory battery (run_asymmetry); thesis=behavioral hot-hand absence (A2 universal; esports asymmetry, football complacency); design/prereg pivoted; 38 tests
+744b6fc | 2026-06-10 20:14:35 (KST) | CHB submission package (anon manuscript/title page/highlights/cover letter/declaration + figures) + next paper: momentum design & prereg
+
+## analysis/momentum/run_asymmetry.py
+5e14af6 | 2026-06-11 11:06:53 (KST) | momentum robustness: TOST + permutation + winsor + window + football LOCO (run_asymmetry)
+4e7c72a | 2026-06-11 07:48:56 (KST) | momentum->negativity: net-z confirmatory battery (run_asymmetry); thesis=behavioral hot-hand absence (A2 universal; esports asymmetry, football complacency); design/prereg pivoted; 38 tests
+
+## docs/results_momentum.md
+0246688 | 2026-06-11 11:14:05 (KST) | momentum robustness LOCKED: all hypotheses robust (A2 hot-hand absence = permutation-null; football complacency LOCO-stable); findings_momentum_robustness
+5e14af6 | 2026-06-11 11:06:53 (KST) | momentum robustness: TOST + permutation + winsor + window + football LOCO (run_asymmetry)
+4e7c72a | 2026-06-11 07:48:56 (KST) | momentum->negativity: net-z confirmatory battery (run_asymmetry); thesis=behavioral hot-hand absence (A2 universal; esports asymmetry, football complacency); design/prereg pivoted; 38 tests
+
+## docs/findings_momentum_robustness.md
+0246688 | 2026-06-11 11:14:05 (KST) | momentum robustness LOCKED: all hypotheses robust (A2 hot-hand absence = permutation-null; football complacency LOCO-stable); findings_momentum_robustness
+
+## analysis/momentum/run_revision.py
+091565c | 2026-09-03 14:19:26 (KST) | JSS final package: workorder P0-P2 (venue/player-cluster analyses, Memmert alignment, 5 refs, supplementary, two manuscript files)
+1f858c8 | 2026-09-03 00:30:54 (KST) | JSS package (Path A): role-stratified reframing, phase-matching sensitivity, LMM re-estimate, 2-round review fixes
+c675600 | 2026-09-02 21:47:08 (KST) | PSE reject response: role/session/cluster analyses + football minute-band adapter
+
+## Key sequence
+744b6fc 2026-06-10 20:14 draft v1 of the plan (momentum_design.md, momentum_prereg.md)
+4e7c72a 2026-06-11 07:48 plan pivoted to net z (v2) + confirmatory battery script + first confirmatory estimates (results_momentum.md) committed together
+5e14af6 2026-06-11 11:06 robustness battery (TOST, permutation, winsorisation, window, LOCO) run and committed
+0246688 2026-06-11 11:14 robustness findings locked
+c675600 2026-09-02 post hoc analyses after peer review (role, session gap, cluster bootstrap, phase matching)
+
+
+## Correction, 2026-09-14 (Study B, football pipeline)
+2026-09-14 | src/football/adapter.py | Post-goal windows had been labelled with the score state in force immediately
+           BEFORE the goal (strict '<' excluded the event goal), so the planned same-score-state matching was in fact
+           a comparison with the pre-goal state. Fixed: the label is now the state at the window start, event goal
+           included. All football estimates in earlier submissions were computed with the mislabelled state.
+2026-09-14 | re-ingest (sb_ingest --mode score / concede) and re-run of run_asymmetry, run_revision (all stages),
+           run_raw_units, run_tracka_tables; new scripts run_prestate_reference.py (reference analysis = pre-goal
+           state, reproducing the before-and-after logic), run_artefact_tables.py (pooled-SD denominator, raw units),
+           run_ijpas_revision.py (control-cell diagnostics, minimum-cell-size sensitivity, baseline-variability
+           terciles). Outputs in 04_results/ (football_*.json, artefact_tables.json, tracka_tables.json,
+           ijpas_revision.json, results_*.md).
+2026-09-14 | Note also: the plan specified excluding windows containing a dismissal; this exclusion was never
+           implemented in the pipeline and is disclosed as a limitation. Pass-length filter is 20 yards (18.3 m).
+
+
+## Revision 1, 2026-10-09 (Study B, football pipeline; peer review at IJPAS, three reviewers)
+2026-10-07 | Reviews received (major revision). The reviewers' questions about the match clock and about the
+           unimplemented dismissal exclusion led to a full re-derivation of every estimate from the raw event data.
+2026-10-08 | src/football/adapter.py | (1) Match clock: windows are now defined within periods and never cross the end
+           of a period (previously minute+second only, so first-half stoppage time overlapped the start of the second
+           half and extra time overlapped the end of normal time). (2) Penalty shoot-out kicks (period 5) had been
+           counted as goals (198 converted kicks in 29 matches); excluded. (3) The pre-specified exclusion of windows
+           containing a dismissal (red card or second yellow, either team) is implemented (context.dismissal_in_window,
+           context.after_dismissal). (4) Control windows now exclude the 15 min after ANY goal by either team, as the
+           Methods describe (the submitted code excluded only the analysed team's own post-goal windows; kept as variant
+           v2_own). Tactical descriptor metrics added (configs/football.yaml, metric_class "descriptor").
+2026-10-08 | src/football/adapter_fast.py | vectorised adapter with variants v1 (submitted logic), v2 (corrected), v2_own,
+           v2_cont; v1 reproduces the submitted parquet files exactly (0 mismatches in 2,211,983 rows).
+2026-10-08 | Full re-ingestion of the 2,404 matches under all four variants (analysis/audit/); the v2 files replace
+           data/features/*.parquet, the submitted files are kept in data/features/_v1_submitted/.
+2026-10-09 | analysis/momentum/run_ijpas_r1.py, r1_lib.py | all revision estimates: pre-specified tests (H1, H2, TOST at
+           99% CI), reference analysis, flow of goals to analysed events, included-versus-excluded comparison, strata
+           (format, sex, competition, opponent-quality terciles) with interaction terms, paired scoring-minus-conceding
+           on the same goals (H3), cluster bootstraps (unit, match, team), within-unit permutation null, team+unit mixed
+           model, non-overlapping controls, K=3 windows, goals analysable in all windows, full-length windows,
+           after-dismissal exclusion, half matching, leave-one-out (out-of-sample) controls, pooled denominator,
+           paired within-cell, within-state time trend, nearest controls, baseline-variability terciles, binomial and
+           Poisson count regressions with cell fixed effects, descriptors, cluster-SE minimum detectable effect.
+           Winsorisation convention unified (net z, 1st-99th percentiles, separately within event and control windows,
+           as the plan specified) across the composite, the per-indicator effects and the mixed model; joint and no
+           winsorisation reported as sensitivity analyses.
+2026-10-09 | analysis/momentum/r1_passes.py (expected-completion model, pass volume and zones), r1_timecourse.py
+           (sliding 5-min windows, 0-10 min), r1_heldout.py (out-of-sample replication in seven competitions not
+           selected on 2026-06-04), r1_goals.py (counts), r1_crosscheck.py (two further code paths; all Table 3 cells
+           agree to 4 decimals), analysis/audit/compare_adapters.py (reference vs vectorised adapter, row for row).
+2026-10-09 | No element of the pre-specified test (unit, matching key, anchor window, net z, SESOI 0.15, alpha 0.005,
+           winsorisation rule) was changed. All analyses added for the revision are labelled post hoc in the manuscript.
+           With the corrected data, H1 is not met (one-sided p = 0.008) and H2 is met (p = 0.001); equivalence is not
+           established for either; the attenuation from the reference to the primary analysis is unchanged.
+
+## Revision 1, second pass, 2026-10-09 (internal re-review of the revised manuscript before submission)
+2026-10-09 | An internal review of the first revision pass identified five implementation problems in run_ijpas_r1.py
+           and the sections that described it. Every estimate was re-derived; the first-pass results are kept as
+           04_results_R1/ijpas_r1*.json and the final results are 04_results_R1/ijpas_r2*.json.
+2026-10-09 | analysis/momentum/r1_goal_ledger.py | goal ledger built from the raw event stream (per goal: period, time,
+           scoring team, score before and after, time to the next goal by either team within the period and on the
+           continuous clock, own goal, penalty, dismissal context). The ledger assigns every post-goal window its score
+           state; the first pass had read the state at the window start from the derived features, which labelled
+           windows that contained a second goal with the later state.
+2026-10-09 | analysis/momentum/r1_lib.py | (1) single-goal exposure: a post-goal window is excluded when another goal
+           (either team) falls between the focal goal and the end of the window (the retained-window version is the
+           sensitivity analysis exposure_all); (2) event-cell controls: the primary comparison uses the control windows
+           of the cells (unit x score state) that contain an analysed event, with the per-event cell-mean difference as
+           companion and the all-cells comparison (the submitted convention) as sensitivity; (3) unit-cluster bootstrap
+           inference (5,000 resamples; 95% and 99% CI, one-sided p with Monte Carlo SE, TOST) for the pre-specified
+           test, window-resampled values kept for comparison; (4) match-stage strata (regular season, group stage,
+           knockout) from StatsBomb competition_stage (r1_match_stage.py), full sample retained.
+2026-10-09 | analysis/momentum/run_ijpas_r2.py | driver for all final estimates (docs/ijpas_r2.json): sequential flow
+           of all 6,528 goals, two-way cluster-robust SE (team x match), crossed team-and-match model of the unit-level
+           contrast, nested team+unit mixed model with optimiser fallback (converged), block leave-one-out controls
+           (overlapping neighbours removed), clipping-by-denominator grid, time trend over measured control distances,
+           descriptors named as computed, per-event H3 tests. r2_crosscheck.py: independent pandas/NumPy re-computation
+           of all twelve Table 3 cells (d, n_event, n_control): 0 disagreements.
+2026-10-09 | analysis/momentum/r1_passes.py | expected-completion model fitted on unique control passes, 5-fold
+           cross-fitting by match (OOS AUC 0.793, calibration slope 0.99), non-regular-play indicator; descriptors
+           reported as event counts and mean coordinates. r1_timecourse.py: single-goal exposure, event-cell controls,
+           and a common series restricted to the goals analysable in every one-minute-step window. r1_heldout.py:
+           ledger, stage strata and event-cell controls for the held-out competitions.
+2026-10-09 | H3 correction: the committed plan (v2, A4) predicted a LARGER deterioration after scoring than after
+           conceding; the submitted manuscript had stated H3 as undirected. H3 is restored to the plan and tested as
+           |d| after scoring minus |d| after conceding; the signed per-goal difference requested at review is reported
+           as post hoc.
+2026-10-09 | With the final pipeline (5 to 10 min window, unit-cluster inference): scoring d = -0.09 [-0.18, -0.01],
+           p = 0.015, H1 not met; conceding d = -0.16 [-0.25, -0.07], p = 0.001, H2 met; equivalence established for
+           neither; H3 (plan direction) not supported (|d_s| - |d_c| = -0.07, p = 0.83). The attenuation from the
+           reference (pre-goal state) to the primary (same state) analysis is unchanged in direction.
+2026-10-09 | Internal review of the second pass (same day). Corrections deposited with the final results: near-control
+           comparison rebuilt on common events and cells within the same period (per-event differences, unit-cluster
+           intervals; the previous version had kept all events while filtering controls, and most of its "near" controls
+           lay in the other half); mixed-model diagnostics recorded in full (log-likelihood, variance components, standard
+           errors, warnings) and unit-intercept models on a variance boundary demoted to diagnostics; stratum interactions
+           re-estimated by within-unit regression with two-way cluster-robust SE; explicit competition_stage mapping
+           (Serie A Women 2023/24 championship and relegation rounds = second-phase round-robin leagues; held-out stage rows
+           recomputed); event-cell count corrected to unique (unit, state) pairs; H3 (A4) tested with a joint match-cluster
+           bootstrap (window-resampled interval kept for comparison); within-unit relabelling distribution reported as a
+           descriptive diagnostic, not a test. Plan v1 (10 June) and v2 (11 June) exported verbatim from the commits
+           744b6fc and 4e7c72a (author line withheld) as B_plan_v1_*.md and B_plan_v2_*.md.
+2026-10-10 | Final check before resubmission. part_nearest compared periods through the 'half' label, which pools both
+           extra-time periods as ET, so a few extra-time control windows from the other period had been kept (14 pairs in
+           the common-event comparison); the condition now uses the period number (frame aggregation carries 'period'),
+           removing 2 events per side (1,359 / 1,360 common events). Values updated in the text, S0 and S8; conclusions
+           unchanged. Mixed-model records gain a separate 'usable_as_evidence' flag (fitted vs usable), and the table notes
+           state the resample counts per analysis.
+2026-11-08 | Second revision (minor revision requested 7 November 2026; Reviewer 2, six minor points; Reviewer 3, accept).
+           No estimate of the first revision changed. Added: (1) restart (kick-off) sensitivity analysis, run from a fresh
+           download of the open events (2,404 matches; re-ingestion without exclusion reproduced the deposited derived
+           data record for record): events of kick-off possessions (play_pattern "From Kick Off", either team) excluded
+           from the indicators in event and control windows, all three windows, both events; second variant excludes the
+           60 s after any goal and the first 60 s of each period (adapter_fast restart_exclusion; r2_kickoff.py;
+           docs/ijpas_r2_kickoff.json; Table 4 row, Table S11). (2) Per-indicator d on the within-unit and pooled scales
+           next to the raw difference (run_ijpas_r2 indpooled; Table S2), to explain in the Results why the within-unit
+           completion and miscontrol indicators are negative after scoring while raw units improve. (3) Clipping grid
+           extended with the plan's rule (event windows only) and the share of event-cell controls lying in a later period
+           than the event (15-min exclusion applies within a period) recorded (run_ijpas_r2 clipgrid; Table S8).
+           Text corrections: the plan's ground for the 5 to 10 min anchor (cross-domain anchor shared with the esport
+           analysis, as the plan states; the celebration/restart reason is the author's); the women's selection rule
+           (series with more than one season or edition, within the 1,500-2,500 match target); seven held-out
+           competition-seasons from six competitions; the resampling scheme of each table row; the plan's two-part
+           criterion |d| >= 0.15 and p < 0.005 reported in full; the attenuation on the goals analysable under both keys
+           tabulated (Table 4); the reference analysis also on the pooled scale (Table 3); the extrapolated d values
+           derived in the text (slope, mean distance, SD of control pooled z); pass share defined where reported.
+           Code fixes: r1_passes.py and r1_timecourse.py read data/interim/match_list.json; r1_goal_ledger.py imports
+           statsbombpy on a cache miss; r1_heldout.py creates the cache directory; src/core/contract.validate_records
+           loads each metric registry once; r2_fetch_events.py added (parallel download into the sb_ingest cache).

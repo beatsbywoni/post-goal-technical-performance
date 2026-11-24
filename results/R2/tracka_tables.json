@@ -1,0 +1,308 @@
+{
+ "competitions": {
+  "African Cup of Nations": {
+   "events_score": 56,
+   "events_concede": 57,
+   "sex": "Men",
+   "seasons": [
+    "2023"
+   ],
+   "matches": 52,
+   "units": 104
+  },
+  "Copa America": {
+   "events_score": 36,
+   "events_concede": 36,
+   "sex": "Men",
+   "seasons": [
+    "2024"
+   ],
+   "matches": 32,
+   "units": 64
+  },
+  "FA Women's Super League": {
+   "events_score": 560,
+   "events_concede": 560,
+   "sex": "Women",
+   "seasons": [
+    "2018/2019",
+    "2019/2020",
+    "2020/2021",
+    "2023/2024"
+   ],
+   "matches": 457,
+   "units": 914
+  },
+  "FIFA World Cup": {
+   "events_score": 145,
+   "events_concede": 145,
+   "sex": "Men",
+   "seasons": [
+    "2018",
+    "2022"
+   ],
+   "matches": 128,
+   "units": 256
+  },
+  "La Liga": {
+   "events_score": 410,
+   "events_concede": 410,
+   "sex": "Men",
+   "seasons": [
+    "2015/2016"
+   ],
+   "matches": 380,
+   "units": 760
+  },
+  "Ligue 1": {
+   "events_score": 374,
+   "events_concede": 374,
+   "sex": "Men",
+   "seasons": [
+    "2015/2016"
+   ],
+   "matches": 377,
+   "units": 754
+  },
+  "Premier League": {
+   "events_score": 419,
+   "events_concede": 420,
+   "sex": "Men",
+   "seasons": [
+    "2015/2016"
+   ],
+   "matches": 380,
+   "units": 760
+  },
+  "Serie A": {
+   "events_score": 413,
+   "events_concede": 413,
+   "sex": "Men",
+   "seasons": [
+    "2015/2016"
+   ],
+   "matches": 380,
+   "units": 760
+  },
+  "UEFA Euro": {
+   "events_score": 111,
+   "events_concede": 111,
+   "sex": "Men",
+   "seasons": [
+    "2020",
+    "2024"
+   ],
+   "matches": 102,
+   "units": 204
+  },
+  "Women's World Cup": {
+   "events_score": 124,
+   "events_concede": 124,
+   "sex": "Women",
+   "seasons": [
+    "2019",
+    "2023"
+   ],
+   "matches": 116,
+   "units": 232
+  }
+ },
+ "metric_d": {
+  "score|post5|short_pass_acc": [
+   -0.001,
+   -0.057,
+   0.055,
+   2309
+  ],
+  "score|post5|miscontrol_rate": [
+   0.031,
+   -0.025,
+   0.086,
+   2347
+  ],
+  "score|post5|foul_per_def_action": [
+   0.036,
+   -0.017,
+   0.088,
+   2186
+  ],
+  "score|post10|short_pass_acc": [
+   0.002,
+   -0.047,
+   0.057,
+   2579
+  ],
+  "score|post10|miscontrol_rate": [
+   0.044,
+   -0.007,
+   0.093,
+   2586
+  ],
+  "score|post10|foul_per_def_action": [
+   0.002,
+   -0.051,
+   0.051,
+   2410
+  ],
+  "score|post15|short_pass_acc": [
+   0.023,
+   -0.026,
+   0.07,
+   2949
+  ],
+  "score|post15|miscontrol_rate": [
+   -0.008,
+   -0.049,
+   0.042,
+   2960
+  ],
+  "score|post15|foul_per_def_action": [
+   -0.015,
+   -0.06,
+   0.03,
+   2751
+  ],
+  "concede|post5|short_pass_acc": [
+   0.062,
+   0.006,
+   0.118,
+   2363
+  ],
+  "concede|post5|miscontrol_rate": [
+   -0.032,
+   -0.086,
+   0.025,
+   2361
+  ],
+  "concede|post5|foul_per_def_action": [
+   0.06,
+   0.007,
+   0.116,
+   2215
+  ],
+  "concede|post10|short_pass_acc": [
+   -0.096,
+   -0.143,
+   -0.046,
+   2591
+  ],
+  "concede|post10|miscontrol_rate": [
+   -0.097,
+   -0.151,
+   -0.046,
+   2605
+  ],
+  "concede|post10|foul_per_def_action": [
+   0.03,
+   -0.017,
+   0.078,
+   2447
+  ],
+  "concede|post15|short_pass_acc": [
+   -0.059,
+   -0.105,
+   -0.013,
+   2979
+  ],
+  "concede|post15|miscontrol_rate": [
+   -0.097,
+   -0.144,
+   -0.05,
+   2984
+  ],
+  "concede|post15|foul_per_def_action": [
+   -0.006,
+   -0.051,
+   0.041,
+   2800
+  ]
+ },
+ "raw_sp": {
+  "score|post5": [
+   0.81,
+   0.08,
+   1.51,
+   2345,
+   81.6,
+   82.4
+  ],
+  "score|post10": [
+   1.36,
+   0.66,
+   2.01,
+   2620,
+   81.8,
+   83.2
+  ],
+  "score|post15": [
+   1.45,
+   0.79,
+   2.02,
+   2995,
+   81.9,
+   83.4
+  ],
+  "concede|post5": [
+   2.1,
+   1.46,
+   2.72,
+   2391,
+   82.3,
+   84.4
+  ],
+  "concede|post10": [
+   0.06,
+   -0.65,
+   0.73,
+   2620,
+   82.2,
+   82.3
+  ],
+  "concede|post15": [
+   0.51,
+   -0.11,
+   1.11,
+   3016,
+   82.3,
+   82.8
+  ]
+ },
+ "lmm": {
+  "score|post5": [
+   -0.001,
+   0.012,
+   0.913718925491438,
+   0.0
+  ],
+  "score|post10": [
+   -0.002,
+   0.011,
+   0.8414014210257429,
+   0.0
+  ],
+  "score|post15": [
+   -0.019,
+   0.01,
+   0.06662924687203846,
+   0.0
+  ],
+  "concede|post5": [
+   0.007,
+   0.012,
+   0.55878893521942,
+   0.0
+  ],
+  "concede|post10": [
+   -0.073,
+   0.011,
+   4.3380154685560346e-11,
+   0.0
+  ],
+  "concede|post15": [
+   -0.064,
+   0.01,
+   4.3577575992704753e-10,
+   0.0
+  ]
+ }
+}

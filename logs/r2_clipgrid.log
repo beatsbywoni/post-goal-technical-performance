@@ -1,0 +1,4 @@
+[    16s] ▶ clipgrid
+[    17s] score clipgrid {'none': -0.1112, 'event_only_1_99': -0.0893, 'separate_1_99': -0.0942, 'joint_1_99': -0.0067, 'separate_5_95': -0.0661} later-period {'n_event_control_pairs': 24833, 'pct_control_in_later_period': 56.65, 'pct_control_in_later_period_within_15min_of_event_window': 9.24, 'pct_event_cells_with_any_later_period_control': 50.91, 'n_control_windows_unique': 24833, 'pct_control_windows_in_period_2_or_later': 80.72}
+[    18s] concede clipgrid {'none': -0.173, 'event_only_1_99': -0.1562, 'separate_1_99': -0.1623, 'joint_1_99': -0.097, 'separate_5_95': -0.1447} later-period {'n_event_control_pairs': 24889, 'pct_control_in_later_period': 56.73, 'pct_control_in_later_period_within_15min_of_event_window': 9.32, 'pct_event_cells_with_any_later_period_control': 50.96, 'n_control_windows_unique': 24889, 'pct_control_windows_in_period_2_or_later': 80.76}
+[    18s] ✓ docs/ijpas_r2.json

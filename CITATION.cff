@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the article and this package."
+title: "Replication package: Does technical performance decline after a goal? A within-team comparison with play at the same score state in ten football competitions"
+type: software
+version: "1.0.0"
+date-released: "2026-11-24"
+authors:
+  - family-names: Jeong
+    given-names: Hongwon
+    affiliation: "Center for Creative Convergence Education, Hanyang University ERICA"
+    orcid: "https://orcid.org/0009-0003-7908-7478"
+    email: beatsbywoni@hanyang.ac.kr
+license: CC-BY-4.0
+keywords:
+  - performance analysis
+  - match status
+  - situational variables
+  - technical performance
+  - football
+  - event data
+preferred-citation:
+  type: article
+  title: "Does technical performance decline after a goal? A within-team comparison with play at the same score state in ten football competitions"
+  authors:
+    - family-names: Jeong
+      given-names: Hongwon
+      orcid: "https://orcid.org/0009-0003-7908-7478"
+  journal: "International Journal of Performance Analysis in Sport"
+  year: 2026
+  doi: "10.1080/24748668.2026.2769735"

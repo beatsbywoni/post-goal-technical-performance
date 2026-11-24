@@ -1,0 +1,10 @@
+# R1 표본 밖 재현용 — 2026-06-04 U3 잠금 때 선택되지 않은, 저장소에 완전한 시즌/대회로 들어 있는 경기들 (2026-10-09 확인).
+# 단일 팀 중심 부분 덤프(Bundesliga 2023/24 레버쿠젠 34경기, PL 2003/04 아스널 38경기, 라리가 메시 서브셋 등)는 제외.
+competitions:
+  - {competition: "Liga F",                 season: "2023/2024", competition_id: 182,  season_id: 281}
+  - {competition: "Frauen Bundesliga",      season: "2023/2024", competition_id: 135,  season_id: 281}
+  - {competition: "Serie A Women",          season: "2023/2024", competition_id: 131,  season_id: 281}
+  - {competition: "NWSL",                   season: "2023",      competition_id: 49,   season_id: 107}
+  - {competition: "Indian Super league",    season: "2021/2022", competition_id: 1238, season_id: 108}
+  - {competition: "UEFA Women's Euro",      season: "2022",      competition_id: 53,   season_id: 106}
+  - {competition: "UEFA Women's Euro",      season: "2025",      competition_id: 53,   season_id: 315}

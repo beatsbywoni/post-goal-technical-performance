@@ -1,0 +1,26 @@
+{
+ "real_dir": "/tmp/claude-0/-home-claude/70e65146-2c17-5185-b831-b4095325e8c5/scratchpad/audit/out_real",
+ "features_dir": "/home/claude/ijpas_r1/data/features",
+ "score": {
+  "matches_compared": 2404,
+  "rows_reference": 2546268,
+  "rows_vectorised": 2546268,
+  "only_in_reference": 0,
+  "only_in_vectorised": 0,
+  "value_mismatches": 0,
+  "context_mismatches": 0,
+  "metric_class_mismatches": 0,
+  "identical": true
+ },
+ "concede": {
+  "matches_compared": 2404,
+  "rows_reference": 2537600,
+  "rows_vectorised": 2537600,
+  "only_in_reference": 0,
+  "only_in_vectorised": 0,
+  "value_mismatches": 0,
+  "context_mismatches": 0,
+  "metric_class_mismatches": 0,
+  "identical": true
+ }
+}

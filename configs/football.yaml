@@ -1,0 +1,73 @@
+# configs/football.yaml — 축구(StatsBomb) 도메인 지식. §5.2–5.3, §12.3
+# 동일한 src/core/ 가 lol.yaml 과 이 파일만 바꿔 두 도메인을 처리한다.
+domain: football
+schema_ver: v1
+
+# ── 사건(실점) 정의 (§5.2) ──
+events:
+  concede:                          # 기본
+    stratify_by: score_transition   # 동점→뒤짐 / 뒤짐→격차 / 앞섬→동점
+    exclude_if: red_card_in_window  # 인원 변화 교란 제외
+  consecutive_concede:              # 용량-반응(H2) 평행
+    rule: "15분 내 2실점"
+  critical_error:                   # 개인 틸트의 가장 깨끗한 신호
+    rule: "StatsBomb error 이벤트 → 5분 내 실점"
+    actor_tracked: true
+
+# 상태 전이 라벨 (§5.4 장치 ③)
+score_transitions: [draw_to_behind, behind_to_gap, ahead_to_draw]
+
+# ── 윈도우 (§5.2) ── Pre5 기저 vs Post5/10/15
+windows:
+  pre: [5]
+  post: [5, 10, 15]
+  extra_time_adjust: true
+  minute_fixed_effect: true
+
+# ── 지표 매핑 (§5.3, 논문 Table 1 원형) ──
+metrics:
+  # 실행 (execution)
+  short_pass_acc:    {class: execution, direction: higher_better,
+                      filter: {length_m: "<20", under_pressure: false},
+                      desc: "압박 없는 단거리 패스 성공률 (#25: 득점팀조차 하락)"}
+  miscontrol_rate:   {class: execution, direction: lower_better,
+                      filter: {per: touch},
+                      desc: "터치당 miscontrol+dispossessed"}
+  foul_per_def_action: {class: execution, direction: lower_better,
+                      desc: "수비 액션당 파울·카드 (좌절-공격, 실행/경계)"}
+  # 선택 (choice)
+  shot_xg_mean:      {class: choice, direction: context,
+                      desc: "슛당 xG 분포 (저xG 난사) — shot_statsbomb_xg 그대로"}
+  shot_distance:     {class: choice, direction: context,
+                      desc: "슛 거리"}
+  pass_progression:  {class: choice, direction: context,
+                      desc: "패스 전진성·길이, 롱볼 비중 (#26)"}
+  pressure_freq:     {class: choice, direction: context,
+                      desc: "상대 점유당 pressure 빈도 (강도)"}
+
+  # 기술(descriptor) — net z 에 들어가지 않음(direction=context). v2(2026-10): 원 단위 모형용 카운트 + 전술 기술 지표
+  sp_attempts:       {class: descriptor, direction: context, desc: "압박 없는 단거리 패스 시도 수(이항 모형 분모)"}
+  sp_completed:      {class: descriptor, direction: context, desc: "압박 없는 단거리 패스 성공 수(이항 모형 분자)"}
+  touches:           {class: descriptor, direction: context, desc: "터치 수(실수율 분모)"}
+  miscontrols:       {class: descriptor, direction: context, desc: "miscontrol+dispossessed 수"}
+  def_actions:       {class: descriptor, direction: context, desc: "수비 행동 수(파울률 분모)"}
+  fouls:             {class: descriptor, direction: context, desc: "파울 수"}
+  pass_volume:       {class: descriptor, direction: context, desc: "창당 패스 시도 수(전술)"}
+  possession_share:  {class: descriptor, direction: context, desc: "팀 패스/(팀+상대 패스) (전술)"}
+  long_pass_share:   {class: descriptor, direction: context, desc: "30야드 이상 패스 비중(전술)"}
+  action_x_mean:     {class: descriptor, direction: context, desc: "온볼 행동 평균 x, 필드 틸트 대리(전술)"}
+  def_action_x_mean: {class: descriptor, direction: context, desc: "수비 행동 평균 x, 수비 라인 높이(전술)"}
+
+# xG는 자체 모델 금지 — StatsBomb 제공값 사용 (범위 통제).
+xg_source: shot_statsbomb_xg
+
+# ── 분해 장치 (§5.4) — 논문의 생명선 ──
+decomposition:
+  - execution_vs_choice          # H5
+  - game_state_matched_baseline  # 같은 스코어 상태의 평시 분
+  - state_transition_contrast    # 동점→뒤짐 vs 앞섬→동점
+  - placebo_events               # 하프타임 직후·무작위 분 → 0 확인
+
+# ── 분석 단위 (§5.5) ──
+unit: team_window                 # 1차
+unit_secondary: error_actor_window

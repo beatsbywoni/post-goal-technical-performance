@@ -1,0 +1,38 @@
+{
+  "title": "Replication package: Does technical performance decline after a goal? A within-team comparison with play at the same score state in ten football competitions",
+  "upload_type": "software",
+  "description": "<p>Code, derived data, analysis plans and results for Jeong, H. (2026). Does technical performance decline after a goal? A within-team comparison with play at the same score state in ten football competitions. <em>International Journal of Performance Analysis in Sport</em>. https://doi.org/10.1080/24748668.2026.2769735</p><p>Every number in the article and its Supplementary Material is stored in the JSON results files, which the code reproduces from the derived data; the derived data are reproduced by the same code from StatsBomb open data (2,404 matches, ten competitions). See README.md for the mapping of results to tables and figures and for the reproduction commands. Data source: StatsBomb open data (https://github.com/statsbomb/open-data); the raw event data are not redistributed.</p><p>Code: MIT licence. Plans, derived data, results and documentation: CC BY 4.0, with the derived data subject to the StatsBomb open data terms.</p>",
+  "creators": [
+    {
+      "name": "Jeong, Hongwon",
+      "affiliation": "Center for Creative Convergence Education, Hanyang University ERICA",
+      "orcid": "0009-0003-7908-7478"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "performance analysis",
+    "match status",
+    "situational variables",
+    "technical performance",
+    "football",
+    "event data",
+    "StatsBomb"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1080/24748668.2026.2769735",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://github.com/statsbomb/open-data",
+      "relation": "isDerivedFrom",
+      "scheme": "url",
+      "resource_type": "dataset"
+    }
+  ]
+}
